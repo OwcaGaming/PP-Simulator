@@ -39,7 +39,7 @@ internal class Program
         };
         foreach (Creature creature in creatures)
         {
-            Console.WriteLine($"{creature.Name,-15}: {creature.Power}");
+            
         }
     }
     static void Lab4b()
