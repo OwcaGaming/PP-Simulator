@@ -33,5 +33,5 @@ public class Orc : Creature
     }
     public override string Info => $"{Name} [{Level}][{Rage}]";
 
-    string Greeting() => ($"Hi, I'm {Name}, my level is {Level}, my rage is {Rage}.");
+    public override string Greeting() => ($"Hi, I'm {Name}, my level is {Level}, my rage is {Rage}.");
 }

@@ -1,28 +1,41 @@
-﻿namespace Simulator;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Numerics;
+using System.Reflection.Emit;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Simulator;
 
 public abstract class Creature
 {
-    private string name = "Unknown";
+    private string _name = "Unknown";
+    private int _level = 1;
+
+
     public string Name
     {
-        get => name;
-        init => name = Validator.Shortener(value, 3, 25, '#');
+        get => _name;
+        init
+        {
 
+            _name = Validator.Shortener(value, 3, 25, '#');
+        }
     }
-    private int level = 1;
     public int Level
     {
-        get => level;
-        init => level = Validator.Limiter(value, 1, 10);
+        get => _level;
+        init
+        {
+
+            _level = Validator.Limiter(value, 1, 10);
+        }
     }
 
     public abstract int Power { get; }
 
-    public abstract string Info { get; }
-
-    public override string ToString() => $"{GetType().Name.ToUpper()}: {Info}";
-
-
+    public Creature() { }
 
     public Creature(string name, int level = 1)
     {
@@ -30,32 +43,30 @@ public abstract class Creature
         Level = level;
     }
 
-    public Creature() { }
+    public abstract string Greeting();
 
-
-    public abstract void Greeting();
+    public abstract string Info { get; }
 
     public void Upgrade()
     {
-        if (level < 10)
-        {
-            level++;
-        }
+        if (_level < 10) _level++;
     }
 
-    string Go(Direction direction) => ($"{Name} goes {direction.ToString().ToLower()}");
-    
+    public string Go(Direction direction) => $"{Name} goes {direction.ToString().ToLower()}.";
 
     public string[] Go(Direction[] directions)
     {
-        string[] result = new string[directions.Length]; 
-        for (int i = 0; i < directions.Length; i++)
+        var results = new string[directions.Length];
+        foreach (var d in directions)
         {
-            result[i] = Go(directions[i]);
+            results.Append(Go(d));
         }
-        return result;
+
+        return results;
     }
 
-    public string[] Go(string letters) => Go(DirectionParser.Parse(letters));
-   
+    public string[] Go(string directionSeq) => Go(DirectionParser.Parse(directionSeq));
+
+    public override string ToString() => $"{GetType().Name.ToUpper()}: {Info}";
+
 }

@@ -4,33 +4,33 @@ internal class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("Starting Simulator!\n");
+        //Console.WriteLine("Starting Simulator!\n");
         Lab4a();
         Creature c = new Elf("Elandor", 5, 3);
-        Console.WriteLine(c);
+        //Console.WriteLine(c);
         Lab4b();
     }
     static void Lab4a()
     {
-        Console.WriteLine("HUNT TEST\n");
+        //Console.WriteLine("HUNT TEST\n");
         var o = new Orc() { Name = "Gorbag", Rage = 7 };
-        o.SayHi();
+        o.Greeting();
         for (int i = 0; i < 10; i++)
         {
             o.Hunt();
-            o.SayHi();
+            //o.SayHi();
         }
 
         Console.WriteLine("\nSING TEST\n");
         var e = new Elf("Legolas", agility: 2);
-        e.SayHi();
+        e.Greeting();
         for (int i = 0; i < 10; i++)
         {
             e.Sing();
-            e.SayHi();
+            //e.SayHi();
         }
 
-        Console.WriteLine("\nPOWER TEST\n");
+        //Console.WriteLine("\nPOWER TEST\n");
         Creature[] creatures = {
         o,
         e,
@@ -50,7 +50,7 @@ internal class Program
         new Elf("e", 15, -3),
         new Orc("morgash", 6, 4)
     };
-        Console.WriteLine("\nMy objects:");
+        //Console.WriteLine("\nMy objects:");
         foreach (var o in myObjects) Console.WriteLine(o);
         /*
             My objects:

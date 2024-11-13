@@ -13,6 +13,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "maps", "maps", "{CD6F1325-3
 		SmallSquareMap.cs = SmallSquareMap.cs
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestSimulator", "TestSimulator\TestSimulator.csproj", "{E24C5CD2-1911-4579-92AA-0DA7D3D17637}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{090F9CCD-0799-4059-8D7C-4CE3E8233091}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{090F9CCD-0799-4059-8D7C-4CE3E8233091}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{090F9CCD-0799-4059-8D7C-4CE3E8233091}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E24C5CD2-1911-4579-92AA-0DA7D3D17637}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E24C5CD2-1911-4579-92AA-0DA7D3D17637}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E24C5CD2-1911-4579-92AA-0DA7D3D17637}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E24C5CD2-1911-4579-92AA-0DA7D3D17637}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
