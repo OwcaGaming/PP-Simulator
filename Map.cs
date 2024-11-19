@@ -1,4 +1,6 @@
-﻿/// <summary>
+﻿namespace Simulator.Map;
+
+/// <summary>
 /// Map of points.
 /// </summary>
 public abstract class Map

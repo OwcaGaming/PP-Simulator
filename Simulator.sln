@@ -11,6 +11,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "maps", "maps", "{CD6F1325-3
 	ProjectSection(SolutionItems) = preProject
 		Map.cs = Map.cs
 		SmallSquareMap.cs = SmallSquareMap.cs
+		SmallTorusMap.cs = SmallTorusMap.cs
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestSimulator", "TestSimulator\TestSimulator.csproj", "{E24C5CD2-1911-4579-92AA-0DA7D3D17637}"
